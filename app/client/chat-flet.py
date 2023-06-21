@@ -5,7 +5,7 @@ import flet as ft
 
 
 TARGET_IP = os.getenv("SERVER_IP") or "127.0.0.1"
-TARGET_PORT = os.getenv("SERVER_PORT") or "8889"
+TARGET_PORT = os.getenv("SERVER_PORT") or "45000"
 ON_WEB = os.getenv("ONWEB") or "0"
 
 
@@ -34,7 +34,6 @@ def main(page):
 
 if __name__=='__main__':
     if (ON_WEB=="1"):
-        ft.app(target=main,view=ft.WEB_BROWSER,port=8550)
+        ft.app(target=main,view=ft.WEB_BROWSER,port=45000)
     else:
         ft.app(target=main)
-
